@@ -6,62 +6,65 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        SizedBox.expand(
-          child: Image.asset(
-            'assets/images/splash_screen bg.jpg',
-            fit: BoxFit.cover,
-          ),
-        ),
-
-        Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Colors.white.withOpacity(0.1),
-                Colors.white.withOpacity(0.6),
-              ],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Stack(
+        children: [
+          // Background Image
+          SizedBox.expand(
+            child: Image.asset(
+              'assets/images/splash_screen bg.jpg',
+              fit: BoxFit.cover,
             ),
           ),
-        ),
 
+          // Gradient Overlay
+          Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Colors.white.withAlpha(26),
+                  Colors.white.withAlpha(153),
+                ],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
+            ),
+          ),
 
-        Scaffold(
-          backgroundColor: Colors.transparent,
-          body: SafeArea(
+          // Foreground Content
+          SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Spacer(flex: 3),
-                  Container(
-                    child: const Text(
-                      'Look\nAwesome &\nSave Some',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 32,
-                        fontWeight: FontWeight.w800,
-                        color: Colors.black,
-                      ),
+
+                  const Text(
+                    'Look\nAwesome &\nSave Some',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 32,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.black,
                     ),
                   ),
+
                   const SizedBox(height: 150),
-                  Container(
-                    child: const Text(
-                      'Step into a world of personalized services that enhance your beauty and well-being.',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87,
-                      ),
+
+                  const Text(
+                    'Step into a world of personalized services that enhance your beauty and well-being.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black87,
                     ),
                   ),
+
                   const Spacer(flex: 2),
+
                   SizedBox(
                     width: 170,
                     child: ElevatedButton(
@@ -72,8 +75,8 @@ class SplashScreen extends StatelessWidget {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFFFF5B5B),
-                        padding: EdgeInsets.symmetric(vertical: 14),
+                        backgroundColor: const Color(0xFFFF5B5B),
+                        padding: const EdgeInsets.symmetric(vertical: 14),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(16),
                         ),
@@ -84,13 +87,14 @@ class SplashScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+
                   const SizedBox(height: 40),
                 ],
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

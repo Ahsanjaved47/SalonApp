@@ -15,7 +15,6 @@ class _CalenderScreenState extends State<CalenderScreen> {
   String? selectedTime;
 
   List<DateTime> getDaysInMonth() {
-    final firstDay = DateTime(selectedYear, selectedMonth, 1);
     final nextMonth = DateTime(selectedYear, selectedMonth + 1, 1);
     final lastDay = nextMonth.subtract(const Duration(days: 1));
     return List.generate(
@@ -23,6 +22,7 @@ class _CalenderScreenState extends State<CalenderScreen> {
           (index) => DateTime(selectedYear, selectedMonth, index + 1),
     );
   }
+
 
   void nextMonth() {
     setState(() {

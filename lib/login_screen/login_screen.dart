@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../ForgetPassword_Screen/Forget_Password_Screen.dart';
+import '../ForgetPassword_Screen/forget_password_screen.dart';
 import '../screens/home_screen.dart';
 import '../signup_screen/signup_screen.dart';
 
@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
 
           Container(
-            color: Colors.white.withOpacity(0.5),
+            color: Colors.white.withAlpha(128),
           ),
 
           Center(
@@ -41,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 padding:
                 const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.85),
+                  color: Colors.white..withAlpha(217),
                   borderRadius: BorderRadius.circular(24),
                   boxShadow: [
                     BoxShadow(

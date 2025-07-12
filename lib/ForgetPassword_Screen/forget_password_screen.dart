@@ -21,9 +21,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         title: const Text('Forget Password'),
-        iconTheme: const IconThemeData(
-          color: Colors.white,
-        ),
+        iconTheme: const IconThemeData(color: Colors.white),
         elevation: 0,
       ),
       body: Stack(
@@ -35,8 +33,9 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
             ),
           ),
 
+          // Replaced deprecated withOpacity with withAlpha
           Container(
-            color: Colors.white.withOpacity(0.25),
+            color: Colors.white.withAlpha((0.25 * 255).toInt()), // = 64
           ),
 
           Center(
@@ -45,9 +44,9 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               child: Container(
                 padding: const EdgeInsets.all(24),
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.85),
+                  color: Colors.white.withAlpha((0.85 * 255).toInt()), // = 217
                   borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: Colors.black12,
                       blurRadius: 10,
@@ -86,9 +85,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                           labelText: 'Enter new password',
                           suffixIcon: IconButton(
                             icon: Icon(
-                              isPasswordVisible
-                                  ? Icons.visibility
-                                  : Icons.visibility_off,
+                              isPasswordVisible ? Icons.visibility : Icons.visibility_off,
                             ),
                             onPressed: () {
                               setState(() {
@@ -108,9 +105,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                         child: ElevatedButton(
                           onPressed: () {
                             ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
-                                content: Text("Password reset successful"),
-                              ),
+                              const SnackBar(content: Text("Password reset successful")),
                             );
                           },
                           style: ElevatedButton.styleFrom(

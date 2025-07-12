@@ -38,7 +38,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
 
           Container(
-            color: Colors.white.withOpacity(0.5),
+            color: Colors.white.withAlpha(128),
           ),
 
           Center(
@@ -49,7 +49,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   Container(
                     padding: const EdgeInsets.all(24),
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.9),
+                      color: Colors.white..withAlpha(230),
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
