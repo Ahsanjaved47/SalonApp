@@ -54,7 +54,6 @@ class PaymentScreen extends StatelessWidget {
 
           const SizedBox(height: 40),
 
-          // 💰 Service Details
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
@@ -72,7 +71,6 @@ class PaymentScreen extends StatelessWidget {
           const Divider(height: 1, thickness: 1, indent: 20, endIndent: 20, color: Colors.white12),
           const SizedBox(height: 20),
 
-          // 🔐 Payment Section
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Text(
@@ -137,7 +135,6 @@ class PaymentScreen extends StatelessWidget {
 
           const Spacer(),
 
-          // ✅ Book Now Button
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: ElevatedButton(

@@ -26,11 +26,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        automaticallyImplyLeading: false, // ✅ Removes back arrow
+        automaticallyImplyLeading: false,
       ),
       body: Stack(
         children: [
-          // Background Image
           Positioned.fill(
             child: Image.asset(
               'assets/images/login_screen bg.jpg',
@@ -38,12 +37,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ),
           ),
 
-          // Transparent overlay
           Container(
             color: Colors.white.withOpacity(0.5),
           ),
 
-          // Centered Card
           Center(
             child: SingleChildScrollView(
               padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -65,7 +62,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        // Login / Sign-up toggle
                         Row(
                           children: [
                             Expanded(
@@ -122,7 +118,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         ),
                         const SizedBox(height: 20),
 
-                        // Text Fields
                         _buildTextField("Full Name", nameController),
                         const SizedBox(height: 12),
                         _buildTextField("Email", emailController),
@@ -154,12 +149,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                         const SizedBox(height: 24),
 
-                        // Sign Up Button
                         SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
                             onPressed: () {
-                              // TODO: handle sign-up
                               ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(
                                   content: Text("Signed up successfully"),
@@ -186,7 +179,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                   const SizedBox(height: 16),
 
-                  // Remember Me Checkbox
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

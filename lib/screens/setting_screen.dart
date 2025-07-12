@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart'; // Needed for SystemNavigator.pop()
+import 'package:flutter/services.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -11,7 +11,6 @@ class SettingsScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            // 🔙 Header with Back Button
             Container(
               width: double.infinity,
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
@@ -49,7 +48,6 @@ class SettingsScreen extends StatelessWidget {
 
             const SizedBox(height: 30),
 
-            // ⚙️ Settings Items
             _buildSettingsTile(title: 'Account Info', onTap: () {}),
             _divider(),
             _buildSettingsTile(title: 'Language', onTap: () {}),
@@ -62,10 +60,10 @@ class SettingsScreen extends StatelessWidget {
             _buildSimpleText('Recommendations'),
             const SizedBox(height: 30),
 
-            // 🚪 Sign Out
+
             GestureDetector(
               onTap: () {
-                SystemNavigator.pop(); // 🔴 Close app
+                SystemNavigator.pop();
               },
               child: const Text(
                 'Sign-out',
@@ -82,7 +80,6 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 
-  // Divider line
   Widget _divider() {
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 20),
@@ -90,7 +87,6 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 
-  // Setting List Tile
   Widget _buildSettingsTile({required String title, required VoidCallback onTap}) {
     return ListTile(
       onTap: onTap,
@@ -102,7 +98,6 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 
-  // Dark Mode Switch (logic to be added via Provider)
   Widget _buildDarkModeToggle() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -115,7 +110,7 @@ class SettingsScreen extends StatelessWidget {
           ),
           Switch(
             value: true,
-            onChanged: null, // 🟡 Replace with theme toggle logic via Provider
+            onChanged: null,
             activeColor: Colors.white,
             activeTrackColor: Colors.grey,
           )
@@ -124,7 +119,6 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 
-  // Footer Text Items
   Widget _buildSimpleText(String title) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),

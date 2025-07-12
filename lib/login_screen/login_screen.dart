@@ -23,7 +23,6 @@ class _LoginScreenState extends State<LoginScreen> {
       extendBodyBehindAppBar: true,
       body: Stack(
         children: [
-          // Background Image
           Positioned.fill(
             child: Image.asset(
               'assets/images/login_screen bg.jpg',
@@ -31,7 +30,6 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
 
-          // Transparent overlay
           Container(
             color: Colors.white.withOpacity(0.5),
           ),
@@ -56,7 +54,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    // Login / Sign-up Toggle
                     Row(
                       children: [
                         Expanded(
@@ -87,7 +84,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         Expanded(
                           child: ElevatedButton(
                             onPressed: () {
-                              // 👇 Smooth transition using Fade effect
                               Navigator.pushReplacement(
                                 context,
                                 PageRouteBuilder(
@@ -125,7 +121,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     const SizedBox(height: 20),
 
-                    // Email Field
                     TextField(
                       controller: emailController,
                       keyboardType: TextInputType.emailAddress,
@@ -151,7 +146,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     const SizedBox(height: 16),
 
-                    // Password Field with Eye Icon
                     TextField(
                       controller: passwordController,
                       obscureText: !isPasswordVisible,
@@ -190,7 +184,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     const SizedBox(height: 10),
 
-                    // Forgot Password
                     Align(
                       alignment: Alignment.centerRight,
                       child: TextButton(
@@ -211,7 +204,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
                     const SizedBox(height: 10),
 
-                    // Login Button
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(

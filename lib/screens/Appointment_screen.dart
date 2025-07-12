@@ -10,7 +10,6 @@ class AppointmentHistoryScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // 🔙 Header with back + menu + profile
             Container(
               decoration: const BoxDecoration(
                 color: Color(0xFF2C2C2E),
@@ -53,7 +52,6 @@ class AppointmentHistoryScreen extends StatelessWidget {
               ),
             ),
 
-            // 📅 Title
             Container(
               alignment: Alignment.centerLeft,
               margin: const EdgeInsets.fromLTRB(20, 30, 20, 10),
@@ -67,7 +65,6 @@ class AppointmentHistoryScreen extends StatelessWidget {
               ),
             ),
 
-            // 📋 Appointment Cards
             _buildAppointmentCard(
               title: "Hair dry",
               stylist: "Lucy",

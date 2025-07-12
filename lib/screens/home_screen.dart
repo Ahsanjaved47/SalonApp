@@ -68,8 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Navigator.push(context, MaterialPageRoute(builder: (_) => const SettingsScreen()));
             }),
             _buildDrawerItem(Icons.logout, 'Logout', () {
-              SystemNavigator.pop(); // Exit app
-              // or use: exit(0); if needed (import 'dart:io')
+              SystemNavigator.pop();
             }),
           ],
         ),

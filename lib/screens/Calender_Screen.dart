@@ -54,7 +54,7 @@ class _CalenderScreenState extends State<CalenderScreen> {
     final monthName = DateFormat.MMMM().format(DateTime(selectedYear, selectedMonth));
 
     return Scaffold(
-      backgroundColor: const Color(0xFF1C1C1E), // Dark masculine background
+      backgroundColor: const Color(0xFF1C1C1E),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.only(bottom: 25),
@@ -62,7 +62,7 @@ class _CalenderScreenState extends State<CalenderScreen> {
             children: [
               Container(
                 decoration: const BoxDecoration(
-                  color: Color(0xFF2C2C2E), // Darker header
+                  color: Color(0xFF2C2C2E),
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(60),
                     bottomRight: Radius.circular(60),
@@ -71,7 +71,6 @@ class _CalenderScreenState extends State<CalenderScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                 child: Column(
                   children: [
-                    // Header Row
                     Row(
                       children: [
                         GestureDetector(
@@ -93,7 +92,6 @@ class _CalenderScreenState extends State<CalenderScreen> {
                     ),
                     const SizedBox(height: 15),
 
-                    // Month Selection
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -117,7 +115,6 @@ class _CalenderScreenState extends State<CalenderScreen> {
                     ),
                     const SizedBox(height: 15),
 
-                    // Dates
                     SizedBox(
                       height: 90,
                       child: ListView.builder(

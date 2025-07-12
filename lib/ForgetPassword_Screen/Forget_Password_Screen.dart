@@ -22,26 +22,23 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
         backgroundColor: Colors.transparent,
         title: const Text('Forget Password'),
         iconTheme: const IconThemeData(
-          color: Colors.white, // ✅ Back arrow color
+          color: Colors.white,
         ),
         elevation: 0,
       ),
       body: Stack(
         children: [
-          // Background image
           Positioned.fill(
             child: Image.asset(
-              'assets/images/forget_password bg.jpg', // ✅ Replace with your asset path
+              'assets/images/forget_password bg.jpg',
               fit: BoxFit.cover,
             ),
           ),
 
-          // White transparent overlay
           Container(
             color: Colors.white.withOpacity(0.25),
           ),
 
-          // Centered content
           Center(
             child: SingleChildScrollView(
               padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -61,7 +58,6 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    // Email Field
                     TextField(
                       controller: emailController,
                       keyboardType: TextInputType.emailAddress,
@@ -81,7 +77,6 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
 
                     const SizedBox(height: 20),
 
-                    // Password Field
                     if (showPasswordField) ...[
                       TextField(
                         controller: passwordController,
@@ -108,12 +103,10 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                       ),
                       const SizedBox(height: 30),
 
-                      // Submit button
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
                           onPressed: () {
-                            // TODO: Add your password reset logic here
                             ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(
                                 content: Text("Password reset successful"),
