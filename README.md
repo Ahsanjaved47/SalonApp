@@ -29,5 +29,7 @@ A beautifully designed and fully functional salon booking application built with
 - Settings  
 
 
+![image alt](https://github.com/Ahsanjaved47/SalonApp/blob/6d405c0e38cca8a84891fb1d7561c663c51dc937/App.png)
+
 
 https://github.com/Ahsanjaved47/SalonApp/blob/ccfc97d3bbb47c511cced219774f008659969599/App.png
