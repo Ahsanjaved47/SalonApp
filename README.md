@@ -30,13 +30,4 @@ A beautifully designed and fully functional salon booking application built with
 
 
 
-   git clone https://github.com/your-username/salon-booking-app.git
-   cd salon-booking-app
-
-
-
-
-
-
-
 https://github.com/Ahsanjaved47/SalonApp/blob/ccfc97d3bbb47c511cced219774f008659969599/App.png
