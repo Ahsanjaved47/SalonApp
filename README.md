@@ -1,16 +1,42 @@
 # saloon_app
 
-A new Flutter project.
+# Salon Booking App 💇‍♂️💅
 
-## Getting Started
+A beautifully designed and fully functional salon booking application built with **Flutter**. This app allows users to explore services, book appointments, view history, and manage their profiles with a smooth, modern UI.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## ✨ Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Clean and minimal UI
+- Appointment calendar with barber & time slot selection
+- Categories for different services (Haircut, Facial, Makeup, etc.)
+- Appointment history tracking
+- Payment overview screen
+- Profile drawer with logout and settings
+- Light/dark themed screens with custom design
+- Fully responsive layout
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+## 📱 Screens Included
+
+- Splash Screen  
+- Login / Signup  
+- Home Screen  
+- Appointment Calendar  
+- Payment Summary  
+- Appointment History  
+- Settings  
+
+
+
+   git clone https://github.com/your-username/salon-booking-app.git
+   cd salon-booking-app
+
+
+
+
+
+
+
+https://github.com/Ahsanjaved47/SalonApp/blob/ccfc97d3bbb47c511cced219774f008659969599/App.png
